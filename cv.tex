@@ -1,0 +1,205 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[scale=0.8]{geometry}
+ \usepackage[left=2cm, right=2cm, top=1.7cm]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+\renewcommand\labelitemi{-}
+
+% personal data
+\name{Thomas}{Davies} 
+
+\address{Southampton - UK}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+447397169767}      % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{t.o.m.davies@soton.ac.uk}                               % optional, remove / comment the line if not wanted
+\homepage{github.com/tomogwen}                         % optional, remove / comment the line if not wanted
+%github{tomogwen}
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle 
+\vspace{-20pt}
+%Après 7 ans d'expérience dans la Communication, je suis à la recherche d'un poste dans le domaine des campagnes de marketing.\\
+%{ \textbf{Expertise}: Marketing online et offline, Coordination des projets, Branding, Merchandising.\\
+%\textbf{Projets réalisés}:http://gnt.globo.com/especiais/projetos-multitelas}
+
+\section{Education}
+
+\vspace{4pt}
+
+%\begin{itemize}
+
+%\item{
+\cventry{September 2019 -- Present}{Southampton, UK}{PhD, Computer Science}{University of Southampton}{}{\vspace{3pt} 
+\begin{itemize}
+\item My research aims to combine tools from topological data analysis with techniques from machine learning to enable topology-driven deep learning.
+\item I'm interested in both the theoretical study of machine learning, with a focus on TDA-based algorithms, and applications of ML to other disciplines: in my first paper we apply a novel algorithm to achieve state-of-the-art classification of transformed materials science datasets.
+\item I have gained practical experience using PyTorch for modelling and research.
+\end{itemize}
+}%}
+
+\vspace{4pt}
+
+%\item{
+\cventry{September 2015 -- July 2019}{Birmingham, UK}{MSci, Mathematics}{University of Birmingham}{}{\vspace{3pt}
+\begin{itemize}
+\item  I graduated with a first class Mathematics MSci with honours, earning an overall mark of 80\%.
+\item  My master's thesis, \textit{The Persistent Homology of Complexes from Point Data Sets}, studied the algebraic topology underpinning topological data analysis, attaining a mark of 83\%.
+\item  My bachelor's thesis was \textit{Burnside's Theorem and Representations of Finite Groups} and achieved a mark of 84\%.
+\end{itemize}
+}%}
+%\end{itemize}
+
+\section{Publications}
+\vspace{4pt}
+\textbf{Fuzzy c-Means Clustering for Persistence Diagrams}, \textit{Thomas O M Davies, Jack Aspinall, Bryan Wilder, Long Tran-Thanh}, \href{https://arxiv.org/abs/2006.02796}{arXiv:2006.02796}, preprint (2020)
+\vspace{3pt}
+{\small
+\begin{itemize}
+    \item We developed an algorithm for fuzzy c-means clustering on the space of persistence diagrams, enabling unsupervised learning that automatically captures the topological structure of data.
+    \item We ran experiments that showed our algorithm can classify transformed lattice structures from materials science where comparable algorithms fail.
+\end{itemize}}
+
+\section{Technical Experience}
+\vspace{4pt}
+\cventry{July 2019 - September 2019}{Team Lead}{EPS EdTech/Maplesoft}{Birmingham, UK}{}{}\vspace{0pt}
+{\small \begin{itemize}
+\item  I led a team of five interns, implementing mathematical questions in a computer algebra system (Maple) to allow for automated, randomised testing within an online assessment system (Maple TA/Möbius). 
+\item As the team lead I was responsible for liaising with clients to confirm individual project requirements, organising the interns to ensure that we met the deadlines for deployment and testing, and dealing with any problems that arose.
+\end{itemize}}
+\vspace{4pt}
+\textit{Developer\hfill September 2017 -- July 2019}
+{\small \vspace{3pt} \begin{itemize}
+\item I worked as a developer for the edtech team over a period of two years, most notably working full-time over Christmas 2017 and 2018.
+\item As well as implementing questions in Maple, this involved writing web applications in JavaScript (using bootstrap, jquery, and more) to act as learning aids. 
+\end{itemize}}
+\vspace{4pt}
+\textit{Intern\hfill July 2017 -- September 2017}
+{\small \vspace{3pt} \begin{itemize}
+\item As an intern I was jointly funded by Birmingham University and Maplesoft, with the same responsibilities as when working as a developer.
+\item I developed a CNN in TensorFlow that successfully classified hand-sketched graphs as part of a project to automate marking. I presented this to a VP of Maplesoft.
+\end{itemize}}
+\pagebreak
+\vspace{4pt}
+\cventry{July 2018 -- September 2018}{Data Scientist}{Fusion Innovations}{Birmingham, UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item I created an end-to-end data science pipeline for Fusion Innovations, an automotive engineering start-up aiming to create smart car tyres. This involved cleaning, processing, visualising, and modelling large amounts of data.
+\item I successfully engineered features extracted from tyre-embedded piezoelectric sensor data to predict technical information about the state of the tyres.
+\item I developed a convolutional recurrent neural network to predict road surface from sensor input.
+\item I wrote and gave presentations to investors and was involved in patent applications for the company.
+\end{itemize}
+}
+
+\vspace{4pt}
+\cventry{January 2017 -- March 2017}{Pace of Play Project}{The R\&A}{St Andrews, UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item I worked with The R\&A on a research project into the pace of play, developing a model that could accurately predict the location of pins and tees given raw GPS data from transceivers worn by golfers.
+\end{itemize}
+}
+
+\vspace{4pt}
+\cventry{July 2016 -- September 2016}{Cybersecurity Intern}{Civil Service}{UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item I learned a large array of cyber skills such as penetration testing, reverse engineering/malware analysis, information assurance, secure coding, hardware hacking, and more. 
+\item As an independent project, I wrote a chat client/server in C that implemented the WEP usage of the RC4 stream cipher, then broke it using the FMS attack. I was selected to present my project to senior management at the end of the internship.
+\end{itemize}
+}
+
+\section{Other Experience}
+
+\cventry{September 2019 -- Present}{Demonstrator}{University of Southampton}{Southampton, UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item Demonstrating for the following courses, which includes leading tutorials, marking, and helping in labs.
+\item Foundations of Computer Science: introductory mathematics for first year undergraduates.
+\item Software Security: penetration testing and software reverse engineering for masters students.
+\item Software Engineering Group Project: agile development for second year undergraduates.
+\end{itemize}
+}
+\vspace{4pt}
+\cventry{September 2018 -- July 2019}{Teaching Assistant}{University of Birmingham}{Birmingham, UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item TA for Data Science for Everyone: introductory python and data science for first year undergraduates.
+\end{itemize}
+}
+\vspace{4pt}
+\cventry{February 2017 - February 2018}{President}{Birmingham University Debating Society}{Birmingham, UK}{}{}\vspace{0pt}
+{\small \begin{itemize}
+\item I was elected to a voluntary position overseeing a committee of 13 that: ran weekly workshops in public speaking and British parliamentary debating; regularly sent competitors to national and international tournaments; organised a competition attended by students from around Europe that ran at a profit of over £900; and organised a competition for secondary school students that promoted public speaking skills to attendees from around the UK, with a focus on providing opportunities for poorly performing schools.
+\item I have strongly developed my public speaking and communication skills through competitive debating.
+\end{itemize}}
+\vspace{4pt}
+\textit{Secretary\hfill February 2016 - February 2017}
+{\small \vspace{3pt} \begin{itemize}
+\item  I introduced and organised an end-of-year formal which sold out, running at a profit for the society. 
+\end{itemize}}
+\vspace{4pt}
+\cventry{September 2010 -- July 2014}{Project Manager}{Build-A-Plane Project, Royal Aeronautical Society/Boeing}{Stroud, UK}{}{\vspace{3pt} 
+\begin{itemize}
+\item I was part of a team of students that built a Rans S6-ES Coyote II light aircraft, which received its certificate of airworthiness in March 2014. In July 2014 it flew at the world-renowned Farnborough airshow, becoming the first student-built aircraft to do so.
+\item As a project manager I helped organise build sessions for the construction of the aircraft, liaising with Boeing and the RAeS. I represented the RAeS at the Houses of Parliament and Boeing at several international air shows and tattoos.
+\end{itemize}
+}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
